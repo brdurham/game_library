@@ -2,11 +2,36 @@
 #Brady Durham
 #1/27/20
 
+import pickle
+
+#dictionary
+games = { 1: ['FPS', 'Halo3', 'Bungie', 'Microsoft', 'Xbox360', '2007',
+              '10', 'either', '$30.00', 'yes', '1/15/2008', 'This game blows chunks!'],
+              2: ['FPS', 'Doom', 'id Software', 'Bethesda Softworks', 'XboxOne', '2016',
+              '10', 'either', '$10.00', 'no', '4/8/2018', 'Heavy metal music intensifies'] }
+              
 def print_all_games():
-    print("running print_all_games() ")
+    #print("running print_all_games() ")
+    key_list = games.keys()
     
+        
+    for key in key_list:
+        print("Genre: ", games[key][0])
+        print("Title: ", games[key][1])
+        print("Developer: ", games[key][2])
+        print("Publisher: ", games[key][3])
+        print("Platform: ", games[key][4])
+        print("Year Released: ", games[key][5])
+        print("Personal Rating: ", games[key][6])
+        print("Single or Multiplayer: ", games[key][7])
+        print("Price: ", games[key][8])
+        print("Beaten it: ", games[key][9])
+        print("Date Bought: ", games[key][10])
+        print("Notes: ", games[key][11])
+        print("------------------------------")
+      
 def search_by_title():
-    print("running search_by_title() ")
+    print("running search_by_title() ") 
 
 def add_game():
     print("running add_game() ")
@@ -20,6 +45,9 @@ def delete_game():
    
 def save_database():
     print("saving database")
+    data_file = open("game_lib.pickle", "wb")
+    pickle.dump(games, data_file)
+    data_file.close()    
    
 def quit():
     print("Qutting Now")
@@ -27,6 +55,7 @@ def quit():
 
 
 keep_going = True
+
 
 while keep_going:
     print("""
