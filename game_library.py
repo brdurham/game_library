@@ -8,7 +8,7 @@ import pickle
 games = { 1: ['FPS', 'Halo3', 'Bungie', 'Microsoft', 'Xbox360', '2007',
               '10', 'either', '$30.00', 'yes', '1/15/2008', 'This game blows chunks!'],
               2: ['FPS', 'Doom', 'id Software', 'Bethesda Softworks', 'XboxOne', '2016',
-              '10', 'either', '$10.00', 'no', '4/8/2018', 'Heavy metal music intensifies'] }
+              '10', 'either', '$10.00', 'yes', '4/8/2018', 'Heavy metal music intensifies'] }
               
 def print_all_games():
     #print("running print_all_games() ")
