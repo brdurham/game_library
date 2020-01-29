@@ -38,6 +38,7 @@ def search_by_title():
         if name == games[key][1]:
             found_one = True
             print()
+            print("Genre: ", games[key][0])
             print("Title: ", games[key][1])
             print("Developer: ", games[key][2])
             print("Publisher: ", games[key][3])
@@ -52,7 +53,248 @@ def search_by_title():
             print("----------------------")
             
     if not found_one:
-        print("*** NO MATCHES FOUND!***\n")    
+        print("*** NO MATCHES FOUND!***\n")
+        
+def search_by_genre():
+    found_one = False
+    name = input("What is the genre you are looking for?")
+    for key in games.keys():
+        if name == games[key][0]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")
+        
+def search_by_developer():
+    found_one = False
+    name = input("What is the developer you are looking for?")
+    for key in games.keys():
+        if name == games[key][2]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")
+            
+def search_by_publisher():
+    found_one = False
+    name = input("What is the publisher you are looking for?")
+    for key in games.keys():
+        if name == games[key][3]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")
+                
+def search_by_platform():
+    found_one = False
+    name = input("What is the platform you are looking for?")
+    for key in games.keys():
+        if name == games[key][4]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")
+                    
+def search_by_year():
+    found_one = False
+    name = input("What is the release year you are looking for?")
+    for key in games.keys():
+        if name == games[key][5]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")
+                        
+def search_by_rating():
+    found_one = False
+    name = input("What is the rating you are looking for?")
+    for key in games.keys():
+        if name == games[key][6]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")
+                            
+def search_by_mode():
+    found_one = False
+    name = input("What is the player mode you are looking for?")
+    for key in games.keys():
+        if name == games[key][7]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")
+                                
+def search_by_price():
+    found_one = False
+    name = input("What is the pricing you are looking for?")
+    for key in games.keys():
+        if name == games[key][8]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")
+                                    
+def search_by_completion():
+    found_one = False
+    name = input("Have you beaten what you are looking for?")
+    for key in games.keys():
+        if name == games[key][9]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n") 
+                                        
+def search_by_purchase_date():
+    found_one = False
+    name = input("What is the purchase date you are looking for?")
+    for key in games.keys():
+        if name == games[key][10]:
+            found_one = True
+            print()
+            print("Genre: ", games[key][0])
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")
+
 
 def add_game():
     print("running add_game() ")
@@ -62,7 +304,7 @@ def edit_game():
     print("running edit_game() ")
         
 def delete_game():
-   print("deleting game")
+    print("deleting game")
    
 def save_database():
     print("saving database")
@@ -86,13 +328,26 @@ while keep_going:
     MAIN MENU
     1) Print All Games
     2) Add Game
-    3) Lookup By Title
+    3) Search Database
     
     4) Remove A Game
     5) Save Database
     6) Edit Game
     
     Q) Quit
+    
+    When searching database these options allow you to search by different parameters:
+    3)Search by title
+    7)Search by genre
+    8)Search by developer
+    9)Search by publisher
+    10)Search by platform
+    11)Search by release year
+    12)Search by rating
+    13)Search by mode
+    14)Search by price
+    15)Search by completion
+    16)Search by purchase date
     
     """)
     
@@ -108,7 +363,27 @@ while keep_going:
     elif choice == "5":
         save_database()
     elif choice == "6":
-        edit_game()
+        edit_game()        
+    elif choice == "7":
+        search_by_genre()
+    elif choice == "8":
+        search_by_developer()
+    elif choice == "9":
+        search_by_publisher()
+    elif choice == "10":
+        search_by_platform()
+    elif choice == "11":
+        search_by_year()
+    elif choice == "12":
+        search_by_rating()
+    elif choice == "13":
+        search_by_mode()
+    elif choice == "14":
+        search_by_price()
+    elif choice == "15":
+        search_by_completion()
+    elif choice == "16":
+        search_by_purchase_date()
     elif choice == "Q" or choice == "q":
         quit()
         keep_going = False
