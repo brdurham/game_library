@@ -31,7 +31,28 @@ def print_all_games():
         print("------------------------------")
       
 def search_by_title():
-    print("running search_by_title() ") 
+    #print("running search_by_title() ") 
+    found_one = False
+    name = input("What is the title of the game you are looking for?")
+    for key in games.keys():
+        if name == games[key][1]:
+            found_one = True
+            print()
+            print("Title: ", games[key][1])
+            print("Developer: ", games[key][2])
+            print("Publisher: ", games[key][3])
+            print("Platform: ", games[key][4])
+            print("Year Released: ", games[key][5])
+            print("Personal Rating: ", games[key][6])
+            print("Single or Multiplayer: ", games[key][7])
+            print("Price: ", games[key][8])
+            print("Beaten it: ", games[key][9])
+            print("Date Bought: ", games[key][10])
+            print("Notes: ", games[key][11])            
+            print("----------------------")
+            
+    if not found_one:
+        print("*** NO MATCHES FOUND!***\n")    
 
 def add_game():
     print("running add_game() ")
