@@ -30,6 +30,62 @@ def print_all_games():
         print("Notes: ", games[key][11])
         print("------------------------------")
       
+def search():
+    keep_going = True
+    
+    
+    while keep_going:
+        print("""
+        Welcome to Search Menu!
+        ---------------------------
+        
+        Search Menu
+        1)Search by genre
+        2)Search by developer
+        3)Search by publisher
+        
+        4)Search by platform 
+        5)Search by release year 
+        6)Search by rating
+        
+        7)Search by mode
+        8)Search by price
+        9)Search by completion
+        10)Search by purchase date
+        
+        Q) Quit
+        
+       
+         
+        """)
+        
+        choice = input("What would you like to do? ")        
+        if choice == "1":
+            search_by_genre()
+        elif choice == "2":
+            search_by_developer()
+        elif choice == "3":
+            search_by_publisher()
+        elif choice == "4":
+            search_by_platform()
+        elif choice == "5":
+            search_by_year()
+        elif choice == "6":
+            search_by_rating()
+        elif choice == "7":
+            search_by_mode()
+        elif choice == "8":
+            search_by_price()
+        elif choice == "9":
+            search_by_completion()
+        elif choice == "10":
+            search_by_purchase_date()
+        elif choice == "Q" or choice == "q":
+            quit()
+        else:
+            print("*** NOT A VALID CHOICE ***\n")
+
+      
 def search_by_title():
     #print("running search_by_title() ") 
     found_one = False
@@ -336,19 +392,8 @@ while keep_going:
     
     Q) Quit
     
-    When searching database these options allow you to search by different parameters:
-    3)Search by title
-    7)Search by genre
-    8)Search by developer
-    9)Search by publisher
-    10)Search by platform
-    11)Search by release year
-    12)Search by rating
-    13)Search by mode
-    14)Search by price
-    15)Search by completion
-    16)Search by purchase date
-    
+   
+     
     """)
     
     choice = input("What would you like to do? ")
@@ -357,33 +402,13 @@ while keep_going:
     elif choice == "2":
         add_game()
     elif choice == "3":
-        search_by_title()
+        search()
     elif choice == "4":
         delete_game()
     elif choice == "5":
         save_database()
     elif choice == "6":
         edit_game()        
-    elif choice == "7":
-        search_by_genre()
-    elif choice == "8":
-        search_by_developer()
-    elif choice == "9":
-        search_by_publisher()
-    elif choice == "10":
-        search_by_platform()
-    elif choice == "11":
-        search_by_year()
-    elif choice == "12":
-        search_by_rating()
-    elif choice == "13":
-        search_by_mode()
-    elif choice == "14":
-        search_by_price()
-    elif choice == "15":
-        search_by_completion()
-    elif choice == "16":
-        search_by_purchase_date()
     elif choice == "Q" or choice == "q":
         quit()
         keep_going = False
