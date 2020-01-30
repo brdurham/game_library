@@ -353,11 +353,89 @@ def search_by_purchase_date():
 
 
 def add_game():
-    print("running add_game() ")
-
+    #print("running add_game() ")
+    new_key = len(games) + 1
+    new_entry = []
+    valid = False
+    while not valid:
+        genre = input("What is the genre?")
+        new_entry.append(genre)
+        title = input("What is the title?")
+        new_entry.append(title)
+        developer = input("What is the developer?")
+        new_entry.append(developer)
+        publisher = input("What is the publisher?")
+        new_entry.append(publisher)
+        platform = input("What is the platform?")
+        new_entry.append(platform)
+        year = input("What is the release year?")
+        new_entry.append(year)
+        rating = input("What is the rating?")
+        new_entry.append(rating)
+        mode = input("Is it single or multiplayer?")
+        new_entry.append(mode)
+        price = input("What is the price?")
+        new_entry.append(price)
+        completion = input("Have you beaten it?")
+        new_entry.append(completion)
+        date = input("What is the purchase date?")
+        new_entry.append(date)
+        notes = input(" ")
+        new_entry.append(notes)
+        
+        
+        
+        answer = input("Is this correct?")
+        if answer.lower() in ("yes, y"):
+            valid = True
+        games[new_key] = new_entry
+    
         
 def edit_game():
-    print("running edit_game() ")
+    #print("running edit_game() ")
+    print("Here is the library: ")
+    for key in games.keys():
+        print(key, "-", games[key][1])
+        edit_key = input("Which game would you like to edit?")
+        edit_entry = games[edit_key]
+        genre = input("What is the genre?")
+        print("Current Genre: ", edit_entry[0])
+        edit_entry[0] = input("New Genre: ")
+        title = input("What is the title?")
+        print("Current Title: ", edit_entry[1])
+        edit_entry[1] = input("New Title: ")
+        developer = input("What is the developer?")
+        print("Current Developer: ", edit_entry[2])
+        edit_entry[2] = input("New Developer: ")
+        publisher = input("What is the publisher?")
+        print("Current Publisher: ", edit_entry[3])
+        edit_entry[3] = input("New Publisher: ")
+        platform = input("What is the platform?")
+        print("Current Platform: ", edit_entry[4])
+        edit_entry[4] = input("New Platform: ")
+        year = input("What is the release year?")
+        print("Current Release Year: ", edit_entry[5])
+        edit_entry[5] = input("New Release Year: ")
+        rating = input("What is the rating?")
+        print("Current Rating: ", edit_entry[6])
+        edit_entry[6] = input("Rating: ")
+        mode = input("Is it single or multiplayer?")
+        print("Current Mode: ", edit_entry[7])
+        edit_entry[7] = input("New Mode: ")
+        price = input("What is the price?")
+        print("Current Price: ", edit_entry[8])
+        edit_entry[8] = input("New Price: ")
+        completion = input("Have you beaten it?")
+        print("Current Completion: ", edit_entry[9])
+        edit_entry[9] = input("New Completion: ")
+        date = input("What is the purchase date?")
+        print("Current Purchase Date: ", edit_entry[10])
+        edit_entry[10] = input("New Purchase Date: ")
+        notes = input(" ")
+        print("Current Notes: ", edit_entry[11])
+        edit_entry[11] = input("New Notes: ")
+    
+    
         
 def delete_game():
     print("deleting game")
@@ -384,11 +462,11 @@ while keep_going:
     MAIN MENU
     1) Print All Games
     2) Add Game
-    3) Search Database
+    3) Edit Game
     
-    4) Remove A Game
-    5) Save Database
-    6) Edit Game
+    4)Search Database
+    5) Remove A Game
+    6) Save Database
     
     Q) Quit
     
@@ -402,13 +480,13 @@ while keep_going:
     elif choice == "2":
         add_game()
     elif choice == "3":
-        search()
+        edit_game()
     elif choice == "4":
-        delete_game()
+        search()
     elif choice == "5":
-        save_database()
+        delete_game()
     elif choice == "6":
-        edit_game()        
+        save_database()      
     elif choice == "Q" or choice == "q":
         quit()
         keep_going = False
