@@ -461,9 +461,9 @@ def quit():
     if choice == "yes":
         save_database()
     elif choice == "no":
-        pickle_file = open("datafile.pickle", "wb")
-        pickle.dump(games, pickle_file)
-        pickle_file.close()
+        data_file = open("game_lib.pickle", "wb")
+        pickle.dump(games, data_file_file)
+        data_file.close()
     else:
         print("*** NOT A VALID CHOICE ***")
     
