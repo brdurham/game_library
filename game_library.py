@@ -435,10 +435,19 @@ def edit_game():
         print("Current Notes: ", edit_entry[11])
         edit_entry[11] = input("New Notes: ")
     
-    
-        
+            
 def delete_game():
-    print("deleting game")
+    #print("deleting game")
+    remove_key = None
+    for key in games.keys():
+        print(key, "-", games[key][1])
+        print("------------------------")
+    remove_key = int(input("What game would you like to remove?"))
+    if remove_key not in games:
+        print("*** THAT GAME DOES NOT EXIST ***") 
+    else:
+        entry = games.pop(remove_key)
+        print(remove_key, ":", entry[0], entry[1]+", removed.")    
    
 def save_database():
     print("saving database")
@@ -447,7 +456,16 @@ def save_database():
     data_file.close()    
    
 def quit():
-    print("Qutting Now")
+    #print("Qutting Now")
+    choice = input("Would you like to save?: ")
+    if choice == "yes":
+        save_database()
+    elif choice == "no":
+        pickle_file = open("datafile.pickle", "wb")
+        pickle.dump(games, pickle_file)
+        pickle_file.close()
+    else:
+        print("*** NOT A VALID CHOICE ***")
     
 
 
